@@ -62,7 +62,7 @@ project-root/
 │ ├── main.py
 ├── README.md
 ├── requirements.txt
-``
+```
 
 ---
 

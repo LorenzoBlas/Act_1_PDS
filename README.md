@@ -54,7 +54,7 @@ Se mostrarán las gráficas de las señales continuas, discretas y combinadas, u
 
 ---
 ## Estructura del Proyecto
-
+```
 project-root/
 ├── src/
 │ ├── utils/
@@ -62,7 +62,7 @@ project-root/
 │ ├── main.py
 ├── README.md
 ├── requirements.txt
-
+``
 
 ---
 

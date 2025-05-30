@@ -10,8 +10,7 @@
 4. [Instalación](#instalación)  
 5. [Uso](#uso)  
 6. [Estructura del Proyecto](#estructura-del-proyecto)  
-7. [Licencia](#licencia)  
-8. [Agradecimientos](#agradecimientos)  
+7. [Agradecimientos](#agradecimientos)  
 
 ---
 
@@ -63,13 +62,6 @@ project-root/
 ├── README.md
 ├── requirements.txt
 ```
-
----
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
-
 ---
 
 ## Agradecimientos

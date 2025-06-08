@@ -1,6 +1,7 @@
 import sys
 from src.act_1 import continuous_signals, discrete_signals, plot_all_signals
 from src.act_2 import continuous_sin, sine_plotter
+from src.act_3 import continuous_sine, discrete_sine, signal_plotter
 
 def main(arg):
     if arg[1] == "act_1":  
@@ -16,9 +17,29 @@ def main(arg):
                 sine_plotter(sine_signal,frequency,time)
             except ValueError:
                 print("Posible argumento fuera de los limites de la programacion (asegurese que el segundo argumento sea un numero entero")
-         
-        
-    #elif arg[1] == "act_3":
+    elif arg[1] == "act_3":
+        if len(arg) > 4:
+            try:
+                amplitude = frequency = phase = K = 0
+                amplitude = int(arg[2])
+                frequency = int(arg[3])
+                phase = float(arg[4])
+                #data_signal = [amplitude, frequency, phase] 
+                signal_xt, time = continuous_sine(amplitude, frequency, phase, K)
+                
+                amplitude = int(arg[2])
+                frequency = int(arg[3])
+                phase = float(arg[4])
+                signal_xtn, time_disc = discrete_sine(amplitude, frequency, phase, K)
+                
+                amplitude = int(arg[2])
+                frequency = int(arg[3])
+                phase = float(arg[4])
+                signal_plotter(signal_xt, time, signal_xtn, time_disc)
+            except ValueError:
+                print("Por favor de proporcionar los suficientes argumentos de entrada / Ampltiud / Frecuencia / Fase (expresado en decimal)")
+        else:
+            print("Por favor de proporcionar los suficientes argumentos de entrada / Ampltiud / Frecuencia / Fase (expresado en decimal)")
     #elif arg[1] == "act:4":
 
 

@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal as sgl
-from src.utils.grapher import continuous_plot, discrete_plot, combined_plot
+from src.utils.grapher import continuous_plot
 
 def continuous_sin(frequency):
 

@@ -2,6 +2,8 @@ import sys
 from src.act_1 import continuous_signals, discrete_signals, plot_all_signals
 from src.act_2 import continuous_sin, sine_plotter
 from src.act_3 import continuous_sine, discrete_sine, signal_plotter
+from src.act_4 import run
+
 
 def main(arg):
     if arg[1] == "act_1":  
@@ -40,9 +42,19 @@ def main(arg):
                 print("Por favor de proporcionar los suficientes argumentos de entrada / Ampltiud / Frecuencia / Fase (expresado en decimal)")
         else:
             print("Por favor de proporcionar los suficientes argumentos de entrada / Ampltiud / Frecuencia / Fase (expresado en decimal)")
-    #elif arg[1] == "act:4":
-
-
+            
+            
+    elif arg[1] == "act_4":
+        if len(arg) > 2:
+            try:
+                bits = int(sys.argv[2])
+                run(bits)
+                if bits <= 0:
+                    raise ValueError
+            except ValueError:
+                print("El número de bits debe ser un entero positivo.")
+                sys.exit(1)
+            
 if __name__ == '__main__':
     args = sys.argv
     if len(args) > 1:
